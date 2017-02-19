@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ 	<head>
+		<link id="link" onchange="changeMedia(event)" rel="stylesheet" type="text/css" href="content/styles/bundle.css" />
+		<!--<link id="icon" onchange="changeMedia(event)" rel="icon" type="image/gif" href="content/imgs/icon.png" />-->
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster|Indie+Flower|Anton|Sigmar+One|Shadows+Into+Light|Pacifico|Orbitron:500|Dancing+Script:700|Gloria+Hallelujah" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Righteous|Montserrat:700|Lora:400italic|Raleway:600|Open+Sans+Condensed:700|Ubuntu:500|Droid+Serif:700" />
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Niconne|Rye" />
+        <link rel="stylesheet" type="text/css" href="content/styles/all.css" />
+		<!--<script src="scripts/editor.js"></script>-->
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src="scripts/jsLibs.template"></script>
+        <script src="scripts/editor.js"></script>
+ 	</head>
+ 	<body>
+        <div id="selectMedia">
+    	 	<select id="mediaScreen" onchange="changeMedia(event)" class="screen">
+    	        <option value="screen">Screen</option>
+    	        <option value="aural">Aural</option>
+    	        <option value="print">Print Portrait</option>
+    	        <option value="landscape">Print Landscape</option>
+    	        <option value="tty">Teletypes</option>
+    	        <option value="tv">TV</option>
+    	        <option value="speech">Speech</option>
+    	        <option value="embossed">Embossed</option>
+    	        <option value="projection">Projection</option>
+                <option value="handheld">Handheld</option>
+                <option value="braille">Braille</option>
+    		</select> 
+        </div>
+         <div class="content">
+             <header>
+                 <div>
+                     <img src="content/imgs/scr_header.jpg" />
+                     <div class="search">
+                         <input type="text" title="search" />
+                         <button type="button">Search</button>
+                     </div>
+                 </div>
+             </header>
+             <main>
+             	 <div class="pulse1"></div>
+            	 <div class="pulse2"></div>
+            	 <div class="pulse3"></div>
+            	 <div class="pulse4"></div>
+                 <table>
+                     <caption>Curriculum Vitae</caption>
+                     <tbody class="one">
+                        <tr>
+                            <th>Surname, name:</th>
+                            <td colspan="3">
+                               <surname id="surname" onclick="editContent('surname')" title="surname">Apresyan</surname>
+                               <name id="name"  onclick="editContent('name')" title="name">Arsen</name>
+                            </td>
+                            <td rowspan="4" class="td_img">
+                                <img class="img" src="content/imgs/manface.png" />
+                            </td>
+                        </tr>
+                         <tr>
+                             <th>Birth Date:</th>
+                             <td colspan="3">04/03/1996</td>
+                         </tr>
+                         <tr>
+                             <th>Birth Place:</th>
+                             <td colspan="3"><address><country id="country" onclick="editContent('country')" title="country">Armenia</country>,<city id="city" onclick="editContent('city')" title="city">Yerevan</city></address></td>
+                         </tr>
+                         <tr>
+                             <th>Nationality:</th>
+                             <td id="nationality" onclick="editContent('nationality')" title="nationality" colspan="3">armenian</td>
+                         </tr>
+                         <tr>
+                             <th>Home phone:</th>
+                             <td colspan="2"><a href="tel:+37410250399"><number id="homephone" onclick="editContent('homephone')" title="homephone">(010)250399</number></a></td>
+                             <th>Mobile phone:</th>
+                     		 <td class="other">
+									( <select>
+										<option label="XXX"></option>
+										<option label="091"></option>
+										<option label="099"></option>
+										<option label="096"></option>
+										<option label="043"></option>
+										<option label="093"></option>
+										<option label="094"></option>
+										<option label="098"></option>
+										<option label="077"></option>
+										<option label="055"></option>
+										<option label="095"></option>
+										<option label="041"></option>
+									</select> )
+									<input type="tel" maxlength="2"></input>-
+									<input type="tel" maxlength="2"></input>-
+									<input type="tel" maxlength="2"></input>
+							 </td>
+                            <!-- <td><a href="tel:+37494789827"><number id="mobilephone" onclick="editContent('mobilephone')" title="mobilephone">(094)789827</number></a></td>-->
+                         </tr>
+                         <tr>
+                             <th><abbr title="Electronic mail">E-mail:</abbr></th>
+                             <td colspan="2"><a href="mailto:arsen.apresyan.96@mail.ru"><email id="E-mail" onclick="editContent('E-mail')" title="E-mail">arsen.apresyan.96@mail.ru</email></a></td>
+                             <th><abbr title="skype">skype:</abbr></th>
+                             <td><a href="skype:arsenapresyan1?call"><skype id="skype" onclick="editContent('skype')" title="skype">arsenapresyan1</skype></a></td>
+                         </tr>
+                         <tr>
+                             <th>Proficiency level:</th>
+                             <td title="Proficiency level" colspan="4"><level id="Proficiencylevel" onclick="editContent('Proficiencylevel')"><q class="a1">TYRO</q>, <q class="a2">beginner</q>, novis<q class="a4">na:vis</q>, <q class="a3">rookie</q></level>
+                             </td>
+                         </tr>
+                         <tr>
+                             <th>Working experience:</th>
+                             <td colspan="4"><workingexperience id="workingexperience" onclick="editContent('workingexperience')">none</workingexperience></td>
+                         </tr>
+                         <tr class="dropDowns">
+                            <td class="formContainer" colspan="6" >
+                                <form>
+                                    <fieldset>
+                                        <legend>Programing Prowess</legend>
+                                        <section>
+                                            <label for="OopLang"> <acronym title="Oject Oriented Programing">OOP </acronym>Languages</label>
+                                            <select id="OopLang" name="OopLang" multiple="multiple" size="3">
+                                                <optgroup value="C-LIKE" label="C-LIKE">
+                                                    <option value="Objective C">Objective C</option>
+                                                    <option value="C++">C++</option>
+                                                    <option value="C#">C#</option>
+                                                </optgroup>
+                                                    <option value="Java">Java</option>
+                                                    <option value="VB">VB</option>
+                                                    <option value="Pascal">Pascal</option>
+                                                    <option value="Delphi">Delphi</option>
+                                                    <option value="Python">Python</option>
+                                            </select>
+                                        </section>
+                                        <section>
+                                            <label for="FunctionalScripts">Functional&#160;Scripts</label>
+                                            <select size="3" id="FunctionalScripts" name="FunctionalScripts">
+                                                <optgroup label="FLASH">
+                                                    <option value="Action Script">Action Script</option>
+                                                </optgroup>
+                                                <optgroup label="JS">
+                                                    <option value="JScript">JScript</option>
+                                                    <option value="Ecma Script">Ecma Script</option>
+                                                    <option value="Java Script">Java Script</option>
+                                                </optgroup>
+                                                <optgroup label="VB">
+                                                    <option value="VB Script">VB Script</option>
+                                                </optgroup>
+                                                <optgroup label="OTHER">
+                                                    <option value="PHP">PHP</option>
+                                                    <option value="LISP">LISP</option>
+                                                    <option value="COBOL">COBOL</option>
+                                                    <option value="Ruby">Ruby</option>
+                                                    <option value="REXX">REXX</option>
+                                                    <option value="PERL">PERL</option>
+                                                </optgroup>
+                                            </select>
+                                        </section>
+                                        <section>
+                                            <label for="MLPowers"><abbr title="MarkUp Language">ML</abbr> Powers</label>
+                                            <input list="MLPowers" name="MLPowers" />
+                                            <input list="MLPowers" name="MLPowers" />
+                                            <input list="MLPowers" name="MLPowers" />
+                                            <datalist id="MLPowers">
+                                                <option value="Java">Java</option>
+                                                <option value="VB">VB</option>
+                                                <option value="Pascal">Pascal</option>
+                                                <option value="Delphi">Delphi</option>
+                                                <option value="Python">Python</option>
+                                            </datalist>
+                                        </section>
+                                        <section>
+                                            <label>Models</label>
+                                                <div class="first_checkbox">
+                                                    <label class="first_checkbox_lbl" for="bom"><acronym title="Browser Object Model" moniker-href="https://en.wikipedia.org/wiki/Browser_Object_Model">BOM</acronym></label>
+                                                    <div class="scnd_checkbox"><input type="checkbox" id="bom" name="bom" value="bom" /></div>
+                                                </div>
+                                                <div class="first_checkbox">
+                                                    <label class="first_checkbox_lbl" for="dom"><acronym title="Browser Object Model" moniker-href="https://www.w3.org/2002/07/26-dom-article.html">DOM</acronym></label>
+                                                    <div class="scnd_checkbox"><input type="checkbox" id="dom" name="dom" value="dom" /></div>
+                                                </div>
+                                                <div class="first_checkbox">
+                                                    <label class="first_checkbox_lbl" for="cssom"><acronym title="Browser Object Model" moniker-href="https://www.w3.org/TR/cssom-1/">CSSOM</acronym></label>
+                                                    <div class="scnd_checkbox"><input type="checkbox" id="cssom" name="cssom" value="cssom" /></div>
+                                                </div>
+                                        </section>
+                                        <section>
+                                            <label for="Storage">Storage</label>
+                                                <div class="first_radio">
+                                                    <label class="first_radio_lbl" for="mysql">My SQL</label>
+                                                    <div class="scnd_radio"><input type="radio" id="mysql" name="Storage" value="mysql" checked="checked" /></div>
+                                                </div>
+                                                <div class="first_radio">
+                                                    <label class="first_radio_lbl" for="mssql">MS SQL</label>
+                                                    <div class="scnd_radio"><input type="radio" id="mssql" name="Storage" value="mssql" /></div>
+                                                </div>
+                                                <div class="first_radio">
+                                                    <label class="first_radio_lbl" for="oracle">Oracle</label>
+                                                    <div class="scnd_radio"><input type="radio" id="oracle" name="Storage" value="oracle" /></div>
+                                                </div>
+                                        </section>
+                                        <section>
+                                            <label for="JSLibs"><acronim title="Java Script Libraries">JS Libs</acronim></label>
+                                            <select id="JSLibs1" name="JSLibs" size="1"></select>
+                                            <select id="JSLibs2" name="JSLibs" size="1"></select>
+                                            <select id="JSLibs3" name="JSLibs" size="1"></select>
+                                        </section>
+                                    </fieldset>
+                                </form>
+                            </td>
+                         </tr>
+                         <tr class="ten">
+                             <th><abbr title="Markup language">ML </abbr>Prowess:</th>
+                             <td colspan="4">
+                                 <a href="https://en.wikipedia.org/wiki/XML">
+                                 	<abbr title="Extensible Markup language">XML,</abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/HTA">
+                                 	<abbr title="HTML aplication">HTA,</abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/HTML">
+                                 	<abbr title="Hyper Text Markup Language">HTML,</abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">
+                                 	<abbr title="Cascading Style Sheets">CSS, </abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">
+                                 	<abbr title="Scalable Vector Graphics">SVG,</abbr>
+                                 </a>
+                             </td>
+                         </tr>
+                         <tr class="ten">
+                             <th>Programming skills:</th>
+                             <td colspan="4">
+                                 <a href="https://en.wikipedia.org/wiki/JavaScript">Decent<abbr title="java script">JS,</abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/Prototype-based_programming"><abbr title="java script and object oriented programming">JS OOP, </abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/Dom"><abbr title="Document Object model">DOM, </abbr></a>
+                                 <a href="https://en.wikipedia.org/wiki/Bom"><abbr title="Browser object model">BOM, </abbr></a>
+                                 <a href="https://en.wikipedia.org/wiki/C"><abbr title="C Sharp">C#, </abbr></a>
+                                 <a href="https://en.wikipedia.org/wiki/Ajax_(programming)"><abbr title="Asynchronous Java script and XML">AJAX, </abbr>
+                                 </a>
+                                 <a href="https://en.wikipedia.org/wiki/SQL"><abbr title="Structered Query language">SQL</abbr>
+                                 </a>
+                             </td>
+                         </tr>
+                         <tr>
+                             <th>Other:</th>
+                             <td colspan="4">music, basketball, ping pong, football</td>
+                         </tr>
+                     </tbody>
+                     <tbody class="second">
+                         <tr>
+                             <th>Languages</th>
+                             <th>Reading</th>
+                             <th>Writing</th>
+                             <th>Comunication</th>
+                             <th>Understanding</th>
+                         </tr>
+                         <tr>
+                             <th>Armenian:</th>
+                             <td>
+								<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+           						<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+								<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+								<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                         </tr>
+                         <tr>
+                             <th>Russian:</th>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                         </tr>
+                         <tr>
+                             <th>English:</th>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                             <td>
+                             	<select>
+									<option label="Excellent" selected="selected" title="Excellent" value="0">Excellent</option>
+									<option label="Average" title="Average" value="1">Average</option>
+									<option label="Poor" title="Poor" value="2">Poor</option>
+								</select>
+                             </td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </main>
+             <footer>
+                 <div>
+                     <span>
+                         <a href="http://www.ogmanic.com" rel="nofollow" title="Ogma Applications">
+                             "OGMA  Aplication"
+                         </a>
+                         <img src="content/imgs/scr_header.jpg" />
+                     </span>
+                     <div class="float">
+                         <span>
+                             <a href="http://www.ogmanic.com" rel="nofollow" title="Ogma Applications"> OGMA INC ©<time>2015</time></a>
+                         </span>
+                         <a href="http://www.twitter.com/ogmainc" rel="nofollow"><img src="content/imgs/twitter.png" /></a>
+                         <a href="http://www.linkedin.com/company/ogmainc" rel="nofollow"><img src="content/imgs/linkedin.png" /></a>
+                         <a href="http://www.facebook.com/ogma.baghdasarian?fref=ts" rel="nofollow" title=""><img src="content/imgs/facebook.png" /></a>
+                     </div>
+                     <div class="first">
+                         <a href="http://www.facebook.com/ogma.baghdasarian?fref=ts" rel="nofollow" title=""><img src="content/imgs/fbpumpkin.png" /><img src="content/imgs/fbpumpkin1.png" /></a>
+                         <a href="http://www.linkedin.com/company/ogmainc" rel="nofollow"><img src="content/imgs/inpumpkin.png" /><img src="content/imgs/inpumpkin1.png" /></a>
+                         <a href="http://www.twitter.com/ogmainc" rel="nofollow"><img src="content/imgs/ttpumpkin.png" /><img src="content/imgs/ttpumpkin1.png" /></a>
+                     </div>
+                     <div class="four">
+                         <button>
+                             <a href="http://www.facebook.com/ogma.baghdasarian?fref=ts" rel="nofollow" title=""><img src="content/imgs/fbutton.png" /></a>
+                         </button>
+                         <button>
+                             <a href="http://www.linkedin.com/company/ogmainc" rel="nofollow"><img src="content/imgs/inbutton.png" /></a>
+                         </button>
+                         <button>
+                             <a href="http://www.twitter.com/ogmainc" rel="nofollow"><img src="content/imgs/tbutton.png" /></a>
+                         </button>
+                     </div>
+                     <div class="five">
+                         <a href="http://www.facebook.com/ogma.bagdasarian?fref=ts" rel="nofollow"><img src="content/imgs/FB_icons.png" /></a>
+                         <a href="http://www.ogma.com"><img src="content/imgs/go.png" /></a>
+                         <span>
+                             OGMA © <time>2015-2016</time>
+                         </span>
+                     </div>
+                     <div class="six">
+                         <a href="http://www.facebook.com/ogma.baghdasarian?fref=ts" rel="nofollow" title=""><img src="content/imgs/fbice.png" /></a>
+                         <a href="http://www.twitter.com/ogmainc" rel="nofollow"><img src="content/imgs/ttice.png" /></a>
+                         <a href="http://www.linkedin.com/company/ogmainc" rel="nofollow"><img src="content/imgs/inice.png" /></a>
+                     </div>
+                     <div class="seven">
+                         <a href="http://www.facebook.com/ogma.baghdasarian?fref=ts" rel="nofollow" title=""><img src="content/imgs/blue.png" /></a>
+                         <a href="http://www.twitter.com/ogmainc" rel="nofollow"><img src="content/imgs/red.png" /></a>
+                         <a href="http://www.linkedin.com/company/ogmainc" rel="nofollow"><img src="content/imgs/yellow.png" /></a>
+                     </div>
+                 </div>
+             </footer>
+         </div>
+ 	</body>
+</html>

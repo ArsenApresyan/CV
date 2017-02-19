@@ -1,0 +1,161 @@
+body {
+	background-image: url(../imgs/wall.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: table;
+}
+select#mediaScreen {
+    background: rgba(255, 228, 196, 0.87);
+}
+.content {
+	display: table-cell;
+
+	vertical-align: middle;
+	padding: 80px 20px;
+}
+main::before {
+	height: 50vh;
+	width: 100px;
+	
+	position: absolute;
+	top: 0;
+	left: 80px;
+	
+	content: "";
+	
+	display: inline-block;
+	background-image: url(../imgs/Rope.png);
+	background-repeat: repeat-y;
+	background-size: 100%;
+	transform: translateY(-100%);
+}
+main {
+	position: relative;
+	
+	display: table;
+	background-color: #fff;
+	padding: 20px;
+    box-shadow: -20px 20px 30px #000;
+
+    margin: auto;
+
+    animation: down 4s;
+}
+main::after {
+	height: 50vh;
+	width: 100px;
+	
+	position: absolute;
+	top: 0;
+	right: 80px;
+	
+	content: "";
+	
+	display: inline-block;
+	background-image: url(../imgs/Rope.png);
+	background-repeat: repeat-y;
+	background-size: 100%;
+	transform: translateY(-100%);
+}
+img.img {
+    height: 100px;
+    width: 100px;
+    vertical-align: middle;
+}
+caption {
+	color: #000;
+	font-size: 25px;
+	font-family: 'Sigmar One', cursive;
+}
+[type="tel"] {
+    width: 20px;
+}
+.one {
+	float: left;
+
+	counter-reset: section;
+	clear: both;
+}
+.one tr:nth-child(1) td:nth-child(3) {
+    text-align: center;
+}
+.one tr::before {
+    height: 100%;
+	width: 30px;
+    
+    color: #000;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    text-align: right;
+    content: counter(section) ".";
+    
+    display: table-cell;
+    counter-increment: section;
+}
+th, td {
+	font-size: 18px;
+}
+.one th {
+	width: 230px;
+
+	color: #000;
+	font-family: "Lobster", cursive;
+	text-align: center;
+	white-space: nowrap;
+	
+	padding-right: 10px;
+}
+.one th:nth-child(3) {
+	width: 80px;
+	
+	padding-left: 12px;
+}
+.one td {
+	color:#000;
+	font-family: "Lobster", cursive;
+	text-align: left;
+	
+	white-space: nowrap;
+	padding-left: 15px;
+}
+.second {
+	width: 100%;
+
+	float: left;
+	clear: both;
+
+	display: table;
+	padding-top: 20px;
+}
+.second th{
+	width: 145px;
+	
+	color: #000;
+	font-family: "Lobster", cursive;
+	text-align: center;
+}
+.second th:nth-child(1) {
+	text-align: right;
+}
+.second td {
+	color: #000;
+	font-family: "Lobster", cursive;
+	text-align: center;
+}
+a {
+	color: #000;
+	font-family: "Lobster", cursive;
+	text-decoration: underline;
+}
+@keyframes down{
+	0%{
+		transform: translate(0, -1000px);
+	}
+	100%{
+		transform: translate(0, 0);
+	}
+}
+footer, header>div, .dropDowns {
+	display: none;
+}

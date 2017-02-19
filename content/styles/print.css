@@ -1,0 +1,133 @@
+html {
+	min-width: 900px;
+}
+body {
+	display: table;
+	background-attachment: fixed; 
+	background-image: url(../imgs/bgprint.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#mediaScreen {
+	text-align: left;
+	background: rgba(172, 174, 112, 0.88);
+}
+.content {
+	display: table-cell;
+	vertical-align: middle;
+}
+main {
+	position: relative;
+
+	display: table; 
+	background-color: rgba(176, 182, 119, .8);
+	padding: 18px 18px 18px 20px;
+	border-radius: 20px;
+	box-shadow: inset 1px 1px 60px 1px #000;
+	margin: 44px auto;
+
+	cursor: url(../imgs/brush.gif),auto;
+}
+caption {
+	color: #1a3f1b;
+ 	font-family: 'Rye', cursive;
+ 	font-size: 30px;
+	
+	padding-bottom: 20px;
+}
+[type="tel"] {
+    width: 23px;
+}
+img.img {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+.one .td_img {
+	padding-left: 0;
+    text-align: center;
+}
+.second select {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: inherit;
+    vertical-align: top;
+    outline: none;
+}
+.one {
+	float: left;
+	
+	counter-reset: section;
+	clear: both;
+}
+.one tr::before {
+    height: 100%;
+	width: 30px;
+    
+    color: #1a3f1b;
+    font-family: 'Anton', sans-serif;
+    font-size: 20px;
+    text-align: right;
+    content: counter(section) ".";
+    
+    display: table-cell;
+    counter-increment: section;
+}
+.one th {
+	width: 250px;
+
+	color: #1a3f1b;
+	font-family: "Anton", sans-serif;
+	text-align: right;
+	white-space: nowrap;
+	
+	padding-right: 10px;
+}
+.one th:nth-child(3) {
+	width: 80px;
+	
+	padding-left: 12px;
+}
+.one td {
+	color: #5a0321;
+	font-family: "Anton", sans-serif;
+	text-align: left;
+	white-space: nowrap;
+
+	padding-left: 10px;
+}
+a{
+	color: #5a0321;
+	
+	text-decoration: none;
+}
+table:hover a{
+	text-decoration: underline;
+}
+.second {
+    width: 100%;
+
+	clear: both;
+	float: left;
+	
+	display: table;
+}
+.second th{
+	width: 145px;
+
+	color: #1a3f1b;
+	font-family: "Anton", sans-serif;
+	text-align: center;
+}
+.second th:nth-child(1) {
+	text-align: right;
+}
+.second td {
+	color: #5a0321;
+	font-family: "Anton", sans-serif;
+	text-align: center;
+}
+header, footer, .dropDowns {
+	display: none;
+}

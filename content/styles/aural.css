@@ -1,0 +1,277 @@
+html {
+	min-height: 770px;
+	min-width: 1220px;
+}
+body {
+	background-image: url(../imgs/desk.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#mediaScreen {
+	height: 30px;
+	width: 180px;
+	font-size: 21px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-left: 40px;
+}
+header::before {
+	height: 95px;
+    width: 125px;
+    
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    
+    background-image: url(../imgs/cvicon.png);
+    background-repeat: no-repeat;
+    background-size: 120px;
+    content: " ";
+}
+header {
+	position: absolute;
+	z-index: 1;
+	top: 140px;
+	left: 20px;
+}
+input {
+	height: 29px;
+	width: 250px;
+
+	vertical-align: top;
+	
+	background-image: url(../imgs/desk.jpg);
+	padding-left: 13px;
+    border: 1px solid #D2A363;
+    border-radius: 15px;
+    outline: none;
+}
+button {
+	height: 31px;
+
+	color: #f5c090;
+	float: left;
+    font-size: 24px;
+    
+    background-image: url(../imgs/desk.jpg);
+    border: 0px solid #DEAD72;
+    border-radius: 13px;
+    outline: none;
+    clear: both;
+}
+main {
+	position: relative;
+
+	display: table;
+	background-image: url(../imgs/paper.jpg);
+	background-repeat: no-repeat;
+	padding-bottom: 55px;
+	margin: 20px auto;
+	
+	transform:translate(200px);
+}
+main::after{
+	width: 150px;
+    height: 120px;
+    
+    position: absolute;
+    top: 55px;
+    right: 302px;
+    content: "";
+    
+    display: inline-block;
+    background-image: url(../imgs/speech_logo.png);
+    background-repeat: no-repeat;
+    background-size: 150px;
+
+    animation:move1 1s;
+}    
+table {
+	width: 870px;
+	
+	border-spacing: 0;
+}
+caption {
+	color: #a90f11;
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+	
+	margin: 10px auto;
+}
+.one tr:nth-child(-n+2) td:nth-of-type(2) {
+	text-align: center;
+	padding-left: 0;
+	border: 1px solid;
+	border-radius: 5px 41px;
+}
+.td_img {
+	
+}
+.img {
+    height: 120px;
+    width: 120px;
+
+    border-radius: 12px;
+    -webkit-filter: hue-rotate(180deg);
+}
+th, td {
+	height: 30px;
+	
+	border-top: 1px solid #948ba0;
+}
+.one {
+	width: 100%;
+	float: left;
+	
+	counter-reset: section;
+	clear: both;
+}
+.one tr::before {
+    height: 100%;
+	width: 30px;
+
+    color: #a90f11;
+    font-size: 20px;
+    text-align: right;
+    content: counter(section) ".";
+    
+    display: table-cell;
+    padding:5px;
+    border-top: 1px solid #948ba0;
+    counter-increment: section;
+}
+.one th {
+	min-width: 240px;
+
+	color: #a90f11;
+	font-family: 'Shadows Into Light', cursive;
+	text-align: right;
+	white-space: nowrap;
+
+	padding-right: 10px;
+	border-right: 2px solid red;
+}
+.one th:nth-child(3) {
+	min-width: 140px;
+
+	padding-left: 12px;
+	border-left: 2px solid red;
+}
+.one td {
+	width: 100%;
+	
+	color: #5f5877;
+	font-family: 'Lobster', cursive;
+
+	white-space: nowrap;
+	
+	padding-left: 15px;
+}
+.one td:nth-child(4) {
+	min-width: 0;
+
+	padding-right: 7px;
+}
+.one td input {
+	height: 25px;	
+	width: 25px;
+	color: #5f5877;
+	padding: 2px 0px 0 5px;
+	border-radius: 3px;
+	outline: none;
+	margin-top: 2px;
+	background-image: none;
+	background-color: blanchedalmond;
+}
+.other select {
+	height: 32px;
+    background-color: rgba(0, 0, 0, 0);
+}
+.second {
+	width: 100%;
+
+	float: left;
+	
+	clear: both;
+	border-bottom: 1px solid #948BA0;
+}
+.second th{
+	width: 20%;
+	
+	color: #a90f11;
+	font-family: 'Indie Flower', cursive;
+	text-align: center;
+	
+	border-left: 2px solid red;
+}
+.second th:nth-child(1) {
+	width: 173px;
+	
+	text-align: right;
+	
+	padding-right: 6px;
+	border-left: none;
+}
+.second td {
+	color: #5f5877;
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	
+	border-left: 2px solid red;
+}
+.second select {
+	height: 100%;
+	width: 100%;
+	border: none;
+	background: inherit;
+	vertical-align: top;
+	outline: none;
+}
+table a {
+	color: #5f5877;
+	font-family: 'Lobster', cursive;
+	text-decoration: none;
+}
+.five a img{
+	height: 50px;
+	width: 50px;
+	
+	position: absolute;
+	left: 50px;
+	
+	background-image: url(../imgs/desk.jpg);
+}
+.five a:nth-child(2) img {
+	height: 40px;
+	width: 40px;
+	
+	padding: 5px;
+	margin-left: 75px;
+}
+.five span {
+	position: absolute;
+	left: 50%;
+	color: #F4C090;
+	font-size: 40px;
+    
+    background-image: url(../imgs/desk.jpg);
+}
+select {
+	color: #5f5877;
+
+	font-family: 'Lobster', cursive;
+	background-color: navajowhite;
+	border: none;
+	outline: none;
+}
+@keyframes move1{
+	0% {
+		transform:scale(20);
+	}
+	100% {
+		transform:scale(1);
+	}
+}
+header>div>img, .four, .first, .float, .six, .seven, footer>div>span, .dropDowns {
+	display: none;
+}

@@ -1,0 +1,298 @@
+html {
+	min-width: 800px;
+}
+body {
+	background-attachment: fixed;
+	background-image: url(../imgs/speechbg.jpg);
+	background-size: cover;
+}
+#selectMedia {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+#mediaScreen {
+	background-color: rgba(148, 138, 107, 0.79);
+}
+header {
+	width: 100%;
+
+	position: fixed;
+	z-index: 1;
+	top: 0;
+}
+header>div {
+	height: 40px;
+	width: 70%;
+	min-width: 350px;
+	
+	position: relative;
+
+	margin: auto;
+}
+header div div {
+	position: absolute;
+
+	top: 7px;
+	right: 55px;
+}
+header>div img {
+	height: 100%;
+	width: 100%;
+	
+	border-radius: 0 0 30px 30px;
+}
+input{
+	width: 200px;
+
+	padding: 3px 6px 3px 10px;
+	border-radius: 8px 0 0 8px;
+
+	transform: translate(4px);
+	box-sizing: border-box;
+}
+input, button{
+	font-size: 15px;
+
+	border: 1px solid #a58663;
+	outline: none;
+}
+button:active {
+	background-color: #fff;
+}
+button{
+	color: #816D5D;
+
+	padding: 3px 10px;
+	border-radius: 0 8px 8px 0;
+}
+main:hover:before {
+	transform: rotate(360deg);
+}
+main::before {
+	height: 170px;
+	width: 170px;
+
+	position: absolute;
+	top: 297px;
+	right: -36px;
+	
+	content: "";
+	
+	display: inline-block;
+	background-image: url(../imgs/cup.png);
+	background-repeat: no-repeat;
+	background-size: 170px;
+
+	transition: 3s;
+}
+main::after {
+	height: 170px;
+    width: 170px;
+
+    position: absolute;
+    top: 297px;
+    right: -36px;
+	
+	content: "";
+	
+	display: inline-block;
+	background-image: url(../imgs/effect.png);
+	background-repeat: no-repeat;
+	background-size: 170px;
+}
+main {
+	position: relative;
+
+	display: table;
+	background-color: #fff;
+	padding: 20px 45px 70px 40px;
+	margin: 100px auto;
+
+	transform: translate(8px);
+}
+table {
+	width: 806px;
+
+	border: 2px solid #000;
+	border-spacing: 0;
+}
+caption {
+	color: #8c7d63;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+
+    padding: 10px 0;
+}
+.img {
+	height: 135px;
+	width: 135px;
+	
+	vertical-align: middle;
+}
+.one .td_img {
+    padding-left: 0;
+    text-align: center;
+}
+.one {
+	width: 100%;
+
+	float: left;
+	clear: both;
+
+	border-spacing: 0;
+	counter-reset: section;
+}
+.one tr:nth-child(11) {
+	outline: 1px solid #000;
+}
+.one tr::before {
+    height: 100%;
+    line-height: 40px;
+	width: 30px;
+
+    color: #000;
+    font-size: 20px;
+    text-align: right;
+	content: counter(section) ".";
+    
+    display: table-cell;
+    background-color: #948a6b;
+    padding-right: 10px;
+    border: 1px solid #000;
+    counter-increment: section;
+}
+.one tr:nth-child(1) td:nth-child(3) {
+	padding-right: 0;
+}
+td .td_img {
+    padding: 0;
+} 
+th, td {
+	padding: 10px;
+	border: 1px solid #000;
+}
+.one th {
+	height: 100%;
+	width: 229px;
+
+	color: #000;
+	font-family: "Orbitron", sans-serif;
+	text-align: right;
+	white-space: nowrap;
+
+	background-color: #948a6b;
+}
+.one th:nth-child(3) {
+	width: 80px;
+
+	padding-left: 12px;
+}
+.one td {
+	color: #000;
+	font-family: "Dancing Script", cursive;
+	text-align: left;
+	white-space: nowrap;
+	
+	background-color: #efdfce;
+	padding-right: 80px;
+}
+.one td input {
+	width: 26px;
+
+	padding: 3px;
+	border-radius: 3px;
+	outline: none;
+}
+.second select {
+	height: 100%;
+	width: 100%;
+	border: none;
+	background: inherit;
+	vertical-align: top;
+	outline: none;
+}
+.second {
+	width: 100%;
+	float: left;
+	clear: both;
+	
+	display: table;
+	padding: 10px;
+	border-spacing: 0;
+	box-sizing:border-box;
+}
+.second tr {
+	outline: 1px solid#000;
+}
+.second th{
+	width: 20%;
+
+	color: #000;
+	font-family: "Orbitron", sans-serif;
+	text-align: center;
+	
+	background-color: #948a6b;
+}
+.second td {
+	width: 20%;
+
+	color: #000;
+	font-family: "Dancing Script", cursive;
+	text-align: center;
+	
+	background-color: #efdfce;	
+}
+table a {
+	color: #000;
+	text-decoration: none;
+	
+	background-color: #efdfce;
+}
+main:hover a {
+	text-decoration: underline;
+}
+footer {
+	width: 100%;
+
+	position: fixed;
+	z-index: 1;
+	bottom: 0px;
+}
+footer>div {
+	height: 40px;
+	width: 70%;
+	min-width: 350px;
+
+	margin: auto;
+}
+footer>div span {
+	height: 100%;
+	width: 100%;
+	
+	position: relative;
+}
+footer span img{
+	height: 100%;
+	width: 100%;
+	
+	border-radius: 30px 30px 0px 0px;
+}
+footer span a {
+	position: absolute;
+	top: -15px;
+	left: 30px;
+
+	color: white;
+	font-size: 15px;
+	font-family: "Pacifico", cursive;
+	text-decoration: none;
+	
+	background-color: none;
+}
+footer span a:hover {
+	text-decoration: underline;
+}
+.float, .four, .five, .six, .seven, .first, .dropDowns {
+	display: none;
+}

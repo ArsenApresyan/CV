@@ -1,0 +1,153 @@
+body {
+	background-image: url(../imgs/ice.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+select#mediaScreen {
+	background: rgba(100, 149, 237, 0.78);
+}
+main {
+	position: relative;
+
+	display: table;
+	opacity: .7;
+	background-color: #9ea3cd;
+	padding: 35px 50px 20px 10px;
+	border-radius: 20px;
+	margin: 40px auto;
+	
+	transform: translate(100px);
+}
+main::after {
+	width: 120px;
+    height: 120px;
+    
+    position: absolute;
+    top: 45px;
+    right: 65px;
+    
+    content: "";
+    
+    display: inline-block;
+    background-image: url(../imgs/print_logo.png);
+    background-repeat: no-repeat;
+    background-size: 120px;
+    
+}
+img.img {
+	display: none;
+}
+caption {
+	color: #fff;
+	font-family: "Raleway", sans-serif;
+	font-size: 40px;
+	
+	margin-bottom: 30px;
+}
+[type="tel"] {
+    width: 20px;
+}
+.one {
+	width: 100%;
+	
+	float: left;
+	
+	counter-reset: section;
+	clear: both;
+}
+.one tr::before {
+    height: 100%;
+	width: 30px;
+
+    color: #a90f11;
+    font-size: 20px;
+    text-align: right;
+    content: counter(section) ".";
+    
+    display: table-cell;
+    counter-increment: section;
+}
+.one th {
+	width: 240px;
+
+	color: #a90f11;
+	font-family: "Raleway", sans-serif;
+	text-align: right;
+	white-space: nowrap;
+	
+	padding-right: 10px;
+}
+.one th:nth-child(3) {
+	width: 120px;
+	
+	padding-left: 12px;
+}
+.one td {
+	color: #644dfd;
+	font-family: "Lobster", cursive;
+	text-align: left;
+	white-space: nowrap;
+	
+	padding-left: 15px;
+}
+.second {
+	width: 100%;
+
+	float: left;
+
+	display: table;
+	clear: both;
+	margin-top: 20px;
+}
+.second th{
+	width: 20%;
+	
+	color: #a90f11;
+	font-family: "Raleway", sans-serif;
+	text-align: center;
+	
+	padding-left: 10px;
+}
+.second th:nth-child(1) {
+	text-align: right;
+}
+.second td {
+	color: #644dfd;
+	font-family: "Lobster", cursive;
+	text-align: center;
+}
+.second select {
+	height: 100%;
+	width: 100%;
+	border: none;
+	background: inherit;
+	vertical-align: top;
+	outline: none;
+}
+table a {
+	color: #644dfd;
+	font-family: "Lobster", cursive;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.six {
+	width: 70px;
+
+	position: absolute;
+    top: 130px;
+    left: 100px;
+    }
+.six a img {
+	height: 70px;
+	width: 70px;
+	
+	transition: 3s;
+}
+.six a img:hover {
+	transform:rotateY(180deg);
+}
+.five, .four, .float, .first, .seven, footer>div>span, header, .dropDowns {
+	display: none;
+}

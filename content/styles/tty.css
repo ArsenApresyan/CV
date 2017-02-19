@@ -1,0 +1,165 @@
+html {
+	min-width: 910px;
+}
+body {
+	background-color: #bdc3c6;
+}
+main {
+	position: relative;
+
+	display: table;
+	background-image: url(../imgs/tv.jpg );
+	background-color: #e7efef;
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	background-size: 140px;
+	padding: 30px 100px 70px 170px;
+	border-radius: 60px;
+	box-shadow: -10px 5px 15px #8c8a8c;
+	margin: auto;
+	margin-top: 25px;
+}
+table {
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: -10px 5px 15px #8c8a8c;
+	border-spacing: 0px;
+}
+.img {
+	height: 80px;
+	width: 80px;
+	border: 10px solid #5a75de;
+	border-radius: 12px;
+}
+caption {
+	display: none;
+}
+.one {
+	width: 100%;
+
+	float: left;
+
+	display: table;
+	counter-reset: section;
+	clear: both;
+}
+.one tr::before {
+    height: 100%;
+	width: 30px;
+
+    color: #fff;
+    
+    font-size: 20px;
+    text-align: center;
+	content: counter(section) ".";
+    
+    display: table-cell;
+    background-color: #5a75de;
+    padding: 5px;
+    border-radius: 12px;
+    counter-increment: section;
+}
+th, td {
+	font-size: 19px;
+}
+tr:hover {
+	opacity: .7;
+}
+.one th {
+	width: 170px;
+
+	color: white;
+	font-family: "Shadows Into Light", cursive;
+	text-align: right;
+	white-space: nowrap;
+	
+	background-color: #5a75de;
+	padding-right: 10px;
+	border-radius: 12px;
+}
+.one th:nth-child(3) {
+	width: 80px;
+
+	text-align: center;
+
+	padding-left: 12px;
+}
+.one td {
+	color: #5a75de;
+
+	text-align: left;
+	font-family: "Lobster", cursive;
+	white-space: nowrap;
+	
+	background-color: white;
+	padding:0 15px;
+}
+.one td input {
+	width: 16px;
+
+	padding: 3px;
+	border-radius: 3px;
+	outline: none;
+}
+.second {
+	width: 100%;
+
+	float: left;
+	clear: both;
+
+	box-shadow: -10px 10px 15px #8c8a8c;
+	border-radius: 13px;
+	
+	transition: 3s;
+}
+.second:hover {
+	transform: translate(65px,40px);
+}
+.second th{
+	height: 30px;
+	width: 176px;
+
+	color: white;
+	font-family: "Indie Flower", cursive;
+	text-align: center;
+	
+	background-color: #5a75de;
+	border-radius: 12px;
+}
+.second th:nth-child(1) {
+	text-align: right;
+	padding-right: 16px
+}
+.second td {
+	color: #5a75de;
+	
+	font-family: "Lobster", cursive;
+	text-align: center;
+	
+	background-color: white;
+	border-radius: 12px;
+}
+select {
+	color: #5a75de;
+
+	font-family: "Lobster", cursive;
+	text-align: center;
+	border: none;
+	outline: none;
+}
+a {
+	color: #5a75de;
+	
+	text-decoration: none;
+}
+main:hover a {
+	text-decoration: underline;
+}
+header, footer, .dropDowns {
+	display: none;
+}
+@media (min-width: 4000px){
+	th, td  {
+		font-size: 5px;
+	}
+}
